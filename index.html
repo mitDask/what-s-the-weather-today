@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's the weather today?</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <header></header>
+  </head>
+  <body>
+    <div class="container">
+      <div class="searchDiv">
+        <!-- <i class="fa-sharp fa-solid fa-location-dot"></i> -->
+        <ion-icon class="location" name="location-sharp"></ion-icon>
+        <input
+          type="text"
+          id="searchbar"
+          class="searchbox"
+          placeholder="Enter a place"
+        />
+        <button class="search-button">
+          <ion-icon name="search-circle-sharp"></ion-icon>
+        </button>
+      </div>
+
+      <div class="error">
+        <img src="/img/no-result-found.jpg" class="not-found" alt="img-not-found" />
+        <p class="p-error">Wrong place/place not found!</p>
+      </div>
+
+      <div id="box" class="box">
+        <img class="box-img" src="" />
+        <p class="temp"></p>
+        <p class="descr"></p>
+      </div>
+
+      <div id="details" class="details">
+        <div class="wind">
+          <div class="writ">
+            <p class="wind-par">Wind</p>
+          </div>
+        </div>
+
+        <!-- <div class="humid-details"> -->
+          <div class="humidity">
+            <ion-icon name="water-outline"></ion-icon>
+            <div class="writ">
+              <p class="humidity-par">Humidity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

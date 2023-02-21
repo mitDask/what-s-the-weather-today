@@ -1,0 +1,675 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(54, 69, 78);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-img {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container {
+  width: 400px;
+  height: 105px;
+  background: #fff;
+  padding: 28px 32px;
+  overflow: hidden;
+  border-radius: 18px;
+  position: relative;
+}
+
+.searchDiv {
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #467694; */
+}
+
+.searchDiv input {
+  color: black;
+  width: 80%;
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 32px;
+  font-style: italic;
+}
+
+.searchDiv input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #06283d;
+  font-style: italic;
+}
+
+.searchDiv button {
+  /* position: absolute; */
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #06283d;
+  background: #dff6ff;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+  /* margin-left: 14rem; */
+  margin-right: 1rem;
+}
+
+.searchDiv button:hover {
+  color: #fff;
+  background: #06283d;
+}
+
+/* .searchDiv i {
+  position: absolute;
+  color: #06283d;
+  font-size: 20px;
+} */
+
+.searchDiv input {
+  padding-left: 7rem;
+}
+
+.location {
+  size: 28px;
+  position: absolute;
+  padding: 3%;
+}
+
+.error {
+  width: 50%;
+  display: none;
+  opacity: 0;
+  scale: 0;
+}
+
+.temp {
+  position: absolute;
+  margin-bottom: -10%;
+
+  margin-top: 25%;
+}
+
+.descr {
+  position: absolute;
+  margin-bottom: -45%;
+}
+
+.details,
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 0;
+  scale: 0; */
+}
+
+.wind {
+  position: absolute;
+  margin-left: -30%;
+  margin-top: -15%;
+}
+
+.humidity {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: -15%;
+}
+
+@keyframes showUp {
+  to {
+    background-color: aliceblue;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(54, 69, 78);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-img {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+  }
+
+  .searchDiv {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #467694; */
+  }
+
+  .searchDiv input {
+    color: black;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 32px;
+    font-style: italic;
+  }
+
+  .searchDiv input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #06283d;
+    font-style: italic;
+  }
+
+  .searchDiv button {
+    /* position: absolute; */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+    /* margin-left: 14rem; */
+    margin-right: 1rem;
+  }
+
+  .searchDiv button:hover {
+    color: #fff;
+    background: #06283d;
+  }
+
+  /* .searchDiv i {
+  position: absolute;
+  color: #06283d;
+  font-size: 20px;
+} */
+
+  .searchDiv input {
+    padding-left: 7rem;
+  }
+
+  .location {
+    size: 28px;
+    position: absolute;
+    padding: 3%;
+  }
+
+  .error {
+    width: 50%;
+    display: none;
+    opacity: 0;
+    scale: 0;
+  }
+
+  .temp {
+    position: absolute;
+    margin-bottom: -10%;
+
+    margin-top: 25%;
+  }
+
+  .descr {
+    position: absolute;
+    margin-bottom: -45%;
+  }
+
+  .details,
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+  scale: 0; */
+  }
+
+  .wind {
+    position: absolute;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  .humidity {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+
+  @keyframes showUp {
+    to {
+      background-color: aliceblue;
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: rgb(54, 69, 78);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-img {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+  }
+
+  .searchDiv {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #467694; */
+  }
+
+  .searchDiv input {
+    color: black;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 32px;
+    font-style: italic;
+  }
+
+  .searchDiv input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #06283d;
+    font-style: italic;
+  }
+
+  .searchDiv button {
+    /* position: absolute; */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+    /* margin-left: 14rem; */
+    margin-right: 1rem;
+  }
+
+  .searchDiv button:hover {
+    color: #fff;
+    background: #06283d;
+  }
+
+  /* .searchDiv i {
+  position: absolute;
+  color: #06283d;
+  font-size: 20px;
+} */
+
+  .searchDiv input {
+    padding-left: 7rem;
+  }
+
+  .location {
+    size: 28px;
+    position: absolute;
+    padding: 3%;
+  }
+
+  .error {
+    width: 50%;
+    display: none;
+    opacity: 0;
+    scale: 0;
+  }
+
+  .temp {
+    position: absolute;
+    margin-bottom: -10%;
+
+    margin-top: 25%;
+  }
+
+  .descr {
+    position: absolute;
+    margin-bottom: -45%;
+  }
+
+  .details,
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+  scale: 0; */
+  }
+
+  .wind {
+    position: absolute;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  .humidity {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+
+  @keyframes showUp {
+    to {
+      background-color: aliceblue;
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background-color: rgb(54, 69, 78);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-img {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+  }
+
+  .searchDiv {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #467694; */
+  }
+
+  .searchDiv input {
+    color: black;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 32px;
+    font-style: italic;
+  }
+
+  .searchDiv input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #06283d;
+    font-style: italic;
+  }
+
+  .searchDiv button {
+    /* position: absolute; */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+    /* margin-left: 14rem; */
+    margin-right: 1rem;
+  }
+
+  .searchDiv button:hover {
+    color: #fff;
+    background: #06283d;
+  }
+
+  /* .searchDiv i {
+  position: absolute;
+  color: #06283d;
+  font-size: 20px;
+} */
+
+  .searchDiv input {
+    padding-left: 7rem;
+  }
+
+  .location {
+    size: 28px;
+    position: absolute;
+    padding: 3%;
+  }
+
+  .error {
+    width: 50%;
+    display: none;
+    opacity: 0;
+    scale: 0;
+  }
+
+  .temp {
+    position: absolute;
+    margin-bottom: -10%;
+
+    margin-top: 25%;
+  }
+
+  .descr {
+    position: absolute;
+    margin-bottom: -45%;
+  }
+
+  .details,
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+  scale: 0; */
+  }
+
+  .wind {
+    position: absolute;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  .humidity {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+
+  @keyframes showUp {
+    to {
+      background-color: aliceblue;
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
+@media (max-width: 400px) {
+  body {
+    background-color: rgb(54, 69, 78);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-img {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    position: relative;
+  }
+
+  .searchDiv {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #467694; */
+  }
+
+  .searchDiv input {
+    color: black;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 32px;
+    font-style: italic;
+  }
+
+  .searchDiv input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #06283d;
+    font-style: italic;
+  }
+
+  .searchDiv button {
+    /* position: absolute; */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+    /* margin-left: 14rem; */
+    margin-right: 1rem;
+  }
+
+  .searchDiv button:hover {
+    color: #fff;
+    background: #06283d;
+  }
+
+  /* .searchDiv i {
+  position: absolute;
+  color: #06283d;
+  font-size: 20px;
+} */
+
+  .searchDiv input {
+    padding-left: 7rem;
+  }
+
+  .location {
+    size: 28px;
+    position: absolute;
+    padding: 3%;
+  }
+
+  .error {
+    width: 50%;
+    display: none;
+    opacity: 0;
+    scale: 0;
+  }
+
+  .temp {
+    position: absolute;
+    margin-bottom: -10%;
+
+    margin-top: 25%;
+  }
+
+  .descr {
+    position: absolute;
+    margin-bottom: -45%;
+  }
+
+  .details,
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0;
+  scale: 0; */
+  }
+
+  .wind {
+    position: absolute;
+    margin-left: -30%;
+    margin-top: -15%;
+  }
+
+  .humidity {
+    position: absolute;
+    margin-left: 30%;
+    margin-top: -15%;
+  }
+
+  @keyframes showUp {
+    to {
+      background-color: aliceblue;
+      opacity: 1;
+      scale: 1;
+    }
+  }
+}
