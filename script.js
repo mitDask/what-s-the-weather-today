@@ -22,6 +22,7 @@ search.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((json) => {
+      console.log(json.weather[0].main);
       if (json.cod === "404") {
         container.style.display = "none";
         details.style.display = "none";
@@ -40,23 +41,22 @@ search.addEventListener("click", function () {
 
       // switch (json.weather[0].main) {
       //documentation
+      console.log(json.weather[0].main);
       switch (json.weather[0].main) {
         case "Clear":
           image.src = "img/sun-w-cloudd.jpg";
+
           break;
 
         case "Rain":
           image.src = "img/rain-w-cloud.jpg";
+          break;
 
         case "Storm":
           image.src = "img/storm.avif";
           break;
 
-        case "Cloudy":
-          image.src = "img/cloudy.jpg";
-          break;
-
-        case "scattered clouds":
+        case "Clouds":
           image.src = "img/cloudy.jpg";
           break;
 
@@ -64,8 +64,12 @@ search.addEventListener("click", function () {
           image.src = "img/snow-rain.jpg";
           break;
 
-        case "Haze":
-          image.src = "img/cloudy.jpg";
+        case "Mist":
+          image.src = "img/mist.png";
+          break;
+
+        case "Fog":
+          image.src = "img/mist.png";
           break;
 
         default:
@@ -83,6 +87,6 @@ search.addEventListener("click", function () {
       weather.classList.add("showUp");
       details.style.display = "";
       details.classList.add("showUp");
-      container.style.height = "590px";
+      container.style.height = "600px";
     });
 });
